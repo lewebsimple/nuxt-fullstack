@@ -8,8 +8,8 @@ export type Scalars = {
   JSONObject: { Input: Record<string, unknown>; Output: Record<string, unknown> };
 };
 
-export const DateScalar = builder.scalarType("Date", { ...DateResolver, description: DateResolver.description || "Date scalar" });
-export const DateTimeScalar = builder.scalarType("DateTime", { ...DateTimeResolver, description: DateTimeResolver.description || "DateTime scalar" });
+export const DateScalar = builder.addScalarType("Date", DateResolver);
+export const DateTimeScalar = builder.addScalarType("DateTime", DateTimeResolver);
 
 export const FileScalar = builder.scalarType("File", {
   serialize: () => {
