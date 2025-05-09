@@ -1,6 +1,9 @@
 {
   "name": "@lewebsimple/nuxt-fullstack",
-  "private": true,
+  "description": "Nuxt 3 fullstack template",
+  "version": "0.1.0",
+  "author": "Pascal Martineau <pascal@lewebsimple.ca>",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "build": "pnpm --sequential /build:.*/",
