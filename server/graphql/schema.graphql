@@ -1,3 +1,17 @@
 type Query {
   appVersion: String
+  me: User
+}
+
+type User {
+  email: String
+  id: ID
+  name: String
+  role: UserRole
+}
+
+enum UserRole {
+  ADMIN
+  GUEST
+  USER
 }
