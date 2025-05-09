@@ -1,16 +1,17 @@
-import { createSchema } from "graphql-yoga";
-import type { Context } from "./context";
+import { writeFileSync } from "fs";
+import { printSchema, lexicographicSortSchema } from "graphql";
 
-// TODO: Refactor schema with Pothos GraphQL
-export const schema = createSchema<Context>({
-  typeDefs: /* GraphQL */ `
-    type Query {
-      hello: String
-    }
-  `,
-  resolvers: {
-    Query: {
-      hello: () => "world",
-    },
-  },
-});
+import * as allTypes from "./types";
+
+Function.prototype(allTypes);
+builder.queryType();
+// builder.mutationType();
+// builder.subscriptionType();
+
+export const schema = builder.toSchema();
+
+// Save GraphQL schema to file
+if (import.meta.dev) {
+  const schemaAsString = printSchema(lexicographicSortSchema(schema));
+  writeFileSync("server/graphql/schema.graphql", schemaAsString);
+}

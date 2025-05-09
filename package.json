@@ -19,6 +19,7 @@
     "release": "changelogen --noAuthors --release --push"
   },
   "dependencies": {
+    "@pothos/core": "^4.6.2",
     "@prisma/client": "^6.7.0",
     "dotenv": "^16.5.0",
     "graphql": "^16.11.0",
