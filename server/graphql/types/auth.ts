@@ -8,6 +8,8 @@ export const UserObject = builder.prismaObject("User", {
     email: t.exposeString("email"),
     name: t.exposeString("name"),
     role: t.expose("role", { type: UserRoleEnum }),
+    createdAt: t.expose("createdAt", { type: "DateTime" }),
+    updatedAt: t.expose("updatedAt", { type: "DateTime" }),
   }),
 });
 
