@@ -21,7 +21,7 @@ The `JSONObject` scalar type represents JSON objects as specified by [ECMA-404](
 scalar JSONObject
 
 type Query {
-  appVersion: String
+  appVersion: String!
   me: User
 }
 
